@@ -60,8 +60,10 @@ make -j4 V=99
 
 
 
-这个博客中有详细说明http://blog.csdn.net/lixuande19871015/article/details/71601363#comments
+这个博客中有详细说明http://blog.csdn.net/lixuande19871015/article/details/71601363
 
 注意选择好自己手头匹配的设备。
+
+另外 探针是基于rt2860v2的商业版驱动修改而来，这里感谢放出rt2860v2驱动的大神lintel和hoowa.sun。
 
 以上
