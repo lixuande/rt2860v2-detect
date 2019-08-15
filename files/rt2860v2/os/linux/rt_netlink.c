@@ -64,7 +64,7 @@ int send_onestatus_to_user(unsigned char *mac, bool bestop) {
     int size;
     struct sk_buff *skb;
     unsigned char *old_tail;
-    struct nlmsghdr *nlh; //
+    struct nlmsghdr *nlh;
 
     int retval;
     
@@ -170,6 +170,9 @@ int send_detectdata_to_user(unsigned char *mac, wifi_detect detect){
 
     unsigned char info[16];
     memset(info, 0, 16);
+    //info数组第一个字符标示帧的类型，第二个字符标示这种帧类型下的具体帧类型。
+    //info第一个字符：1 数据帧 2 管理帧 3 控制帧 
+    //info第二个字符：0 associate帧，2 reassociate帧，4 probe帧，8 beacon帧，10 disassociate帧
     info[0] = detect.frametype;
     info[1] = detect.subtype;
     
