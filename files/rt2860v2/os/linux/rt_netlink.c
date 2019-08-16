@@ -117,6 +117,7 @@ int send_status_to_user(void){
     struct nlmsghdr *nlh; 
 
 	#if 1
+    //
 	extern struct net_device* getadapter(VOID);
 	net_dev = getadapter();
 	if (net_dev != NULL){
@@ -238,7 +239,7 @@ int rt_netlink_init(void){
     return 0;
 }
 
-int rt_netlink_exit(void)
+int rt_netlink_exit(void){
     sock_release(netlinkfd->sk_socket);
     printk(KERN_DEBUG "test_netlink_exit!!\n");
 }
